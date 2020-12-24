@@ -17,8 +17,8 @@ from PIL import Image
 st.set_option('deprecation.showfileUploaderEncoding',False)
 st.title('Image Classifier using Machine Learning')
 st.text('Upload the Image')
-
-model=pickle.load(open('img_model.p','rb'))
+name='img_model.p'
+model=pickle.load(open(name,'rb'))
 
 upload_file=st.file_uploader('Choose an image', type='jpg')
 if upload_file is not None:
